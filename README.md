@@ -1,4 +1,4 @@
-# s23wb40bodapati
+# s23db40bodapati
 
 
 class: Vehicle
@@ -8,5 +8,5 @@ company(String)
 price(number)
 color(String)
 
-[Hosted at](https://s23wb40bodapati.onrender.com)
+[Hosted at](https://s23db40bodapati.onrender.com)
 
