@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  P I am Supriya Bodapati
+  button(type="button" class="btn btn-secondary"  onClick="doReduce()") Press Me
+  div(id="reduce") Reduce the value
+  script. 
+    let count = 20;
+    let change = -1;
+    function doReduce(){
+      count+=change;
+      change--;
+      document.getElementById('reduce').innerHTML=`Count ${count} with Change ${change}.`;
+    }
+  a(href="vehicle") Search Results
