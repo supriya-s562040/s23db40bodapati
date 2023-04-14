@@ -31,3 +31,16 @@ res.send('NOT IMPLEMENTED: vehicle delete DELETE ' + req.params.id);
 exports.vehicle_update_put = function(req, res) {
 res.send('NOT IMPLEMENTED: vehicle update PUT' + req.params.id);
 };
+// VIEWS
+// Handle a show all view
+exports.vehicle_view_all_Page = async function(req, res) {
+    try{
+    thevehicle = await vehicle.find();
+    res.render('vehicle', { title: 'vehicle Search Results', results: thevehicle });
+    }
+    catch(err){
+    res.status(500);
+    res.send(`{"error": ${err}}`);
+    }
+    };
+    
