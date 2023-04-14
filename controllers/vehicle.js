@@ -1,8 +1,20 @@
 var vehicle = require('../models/vehicle');
 // List of all vehicle
-exports.vehicle_list = function(req, res) {
+// List of all vehicle
+exports.vehicle_list = async function(req, res) {
+    try{
+    thevehicle = await vehicle.find();
+    res.send(thevehicle);
+    }
+    catch(err){
+    res.status(500);
+    res.send(`{"error": ${err}}`);
+    }
+    };
+    
+/*exports.vehicle_list = function(req, res) {
 res.send('NOT IMPLEMENTED: vehicle list');
-};
+};*/
 // for a specific vehicle.
 exports.vehicle_detail = function(req, res) {
 res.send('NOT IMPLEMENTED: vehicle detail: ' + req.params.id);
