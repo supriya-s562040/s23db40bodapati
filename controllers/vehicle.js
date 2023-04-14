@@ -37,9 +37,20 @@ exports.vehicle_create_post = async function(req, res) {
     };
     
 // for a specific vehicle.
-exports.vehicle_detail = function(req, res) {
+/*exports.vehicle_detail = function(req, res) {
 res.send('NOT IMPLEMENTED: vehicle detail: ' + req.params.id);
-};
+};*/
+// for a specific vehicle.
+exports.vehicle_detail = async function(req, res) {
+    console.log("detail" + req.params.id)
+    try {
+    result = await vehicle.findById( req.params.id)
+    res.send(result)
+    } catch (error) {
+    res.status(500)
+    res.send(`{"error": document for id ${req.params.id} not found`);
+    }
+    };
 // Handle vehicle create on POST.
 /*exports.vehicle_create_post = function(req, res) {
 res.send('NOT IMPLEMENTED: vehicle create POST');
