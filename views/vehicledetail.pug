@@ -1,0 +1,20 @@
+extends layout
+block content
+ h1= title
+ - let vehicleid = toShow._id
+ - let company = toShow.company
+ - let price = toShow.price
+ - let color = toShow.color
+ div
+  div.row
+   div(class='vehicleAttr mr-3') vehicle ID is:
+   div #{vehicleid}
+  div.row
+   div(class='vehicleAttr mr-3') vehicle company is:
+   div #{company}
+  div.row
+   div(class='vehicleAttr mr-3') vehicle price is:
+   div #{price}
+  div.row
+   div(class='vehicleAttr mr-3') vehicle color  is:
+   div #{color}
