@@ -1,13 +1,14 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 a {
   color: #00B7FF;
 }
 .vehicleAttr {
-  background-color: aquamarine;
+  background-color: rgb(189, 127, 255);
   width: 120px;
   }
   
